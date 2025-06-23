@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightStudy - Study & Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png"> <meta name="theme-color" content="#2b1152"> </head>
+<body>
+    <header class="header">
+        <div class="app-logo">
+            <span class="logo-icon">🦉</span>
+            NightStudy
+        </div>
+        <div class="header-info">
+            <span id="current-time"></span>
+            <span class="night-mode-toggle">🌙 Horário noturno ativo</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="top-modules">
+            <div class="card module-streak">
+                <div class="module-icon">🏆</div>
+                <h3>Sequência de Estudos</h3>
+                <p>Mantenha o ritmo!</p>
+                <div class="streak-days">7 dias</div>
+            </div>
+            <div class="card module-goal">
+                <div class="module-icon">🎯</div>
+                <h3>Meta Diária</h3>
+                <p>Progresso de hoje</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 69%;"></div>
+                </div>
+                <span class="progress-percentage">69%</span>
+            </div>
+            <div class="card module-focus">
+                <div class="module-icon">⏰</div>
+                <h3>Foco Ativo</h3>
+                <p>Técnica Pomodoro</p>
+                <div class="focus-time">25 min</div>
+            </div>
+        </section>
+
+        <nav class="navigation-tabs">
+            <button class="nav-button active" data-tab="pomodoro">📚 Estudar</button>
+            <button class="nav-button" data-tab="vocabulary">🧠 Vocabulário</button>
+            <button class="nav-button" data-tab="chatbot">⏳ Zerar Meta Diaria</button>
+        </nav>
+
+        <section id="pomodoro-section" class="tab-content active">
+            <div class="card pomodoro-timer-card">
+                <h3>Técnica Pomodoro</h3>
+                <div class="timer-display" id="pomodoro-timer">25:00</div>
+                <div class="timer-controls">
+                    <button id="start-pomodoro">Iniciar</button>
+                    <button id="pause-pomodoro">Pausar</button>
+                    <button id="reset-pomodoro">Resetar</button>
+                </div>
+                <div class="pomodoro-config">
+                    <h4>Configurações do Pomodoro</h4>
+                    <label for="pomodoro-duration">Duração do Foco (min):</label>
+                    <input type="number" id="pomodoro-duration" value="25" min="1">
+                    <label for="break-duration">Duração da Pausa (min):</label>
+                    <input type="number" id="break-duration" value="5" min="1">
+                </div>
+            </div>
+        </section>
+
+        <section id="vocabulary-section" class="tab-content">
+            <div class="card vocabulary-card-container">
+                <h3>Estudar Vocabulário</h3>
+                <div class="vocabulary-card">
+                    <div class="card-front active">
+                        <div class="card-label">Inglês:</div>
+                        <h2 id="english-word"></h2>
+                        <p id="english-sentence"></p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-label">Português:</div>
+                        <p id="portuguese-translation"></p>
+                        <div class="card-label">Espanhol:</div>
+                        <p id="spanish-translation"></p>
+                    </div>
+                </div>
+                <div class="vocabulary-controls">
+                    <button id="flip-card">Mostrar Tradução</button>
+                    <button id="next-card">Próxima Palavra</button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="chatbot-section" class="tab-content">
+            <div class="card chatbot-container">
+                <h3>Conversação com IA</h3>
+                <p>Pratique conversação em inglês com nossa IA especializada</p>
+                <div id="bp-web-widget-container"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/06/22/17/20250622172651-6U5NWWQ0.js" defer></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
