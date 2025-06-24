@@ -5,7 +5,7 @@ const urlsToCache = [
     './style.css',
     './script.js',
     './manifest.json',
-    './src/icons/multilingue.png',
+    './icons/multilingue.png',
     
     // You might want to cache the Botpress scripts if you want them to work offline,
     // but caching third-party scripts can be tricky due to updates.
