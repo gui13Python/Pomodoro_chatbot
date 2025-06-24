@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
 :root {
     --bg-color: #1a0833; /* Dark purple */
     --card-bg: #2b1152; /* Slightly lighter purple for cards */
