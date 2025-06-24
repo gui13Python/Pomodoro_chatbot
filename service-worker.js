@@ -1,18 +1,12 @@
-const CACHE_NAME = 'nightstudy-v1';
+const CACHE_NAME = 'SpeakFlow';
 const urlsToCache = [
     './',
     './index.html',
     './style.css',
     './script.js',
     './manifest.json',
-    './icons/icon-72x72.png',
-    './icons/icon-96x96.png',
-    './icons/icon-128x128.png',
-    './icons/icon-144x144.png',
-    './icons/icon-152x152.png',
-    './icons/icon-192x192.png',
-    './icons/icon-384x384.png',
-    './icons/icon-512x512.png'
+    './src/icons/multilingue.png',
+    
     // You might want to cache the Botpress scripts if you want them to work offline,
     // but caching third-party scripts can be tricky due to updates.
     // For this example, I'm omitting them from precaching.
