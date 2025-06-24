@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png"> <meta name="theme-color" content="#2b1152"> </head>
+
 <body>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
     <header class="header">
         <div class="app-logo">
-            <span class="logo-icon">🦉</span>
-            NightStudy
+            <!-- <span class="logo-icon">🦉</span> -->
+             
+            <span><img id="poli" src="./icons/multilingue.png" width="40" height="40" alt=""></span>
+            SpeakFlow
+            
+            
         </div>
         <div class="header-info">
             <span id="current-time"></span>
@@ -47,12 +53,13 @@
         <nav class="navigation-tabs">
             <button class="nav-button active" data-tab="pomodoro">📚 Estudar</button>
             <button class="nav-button" data-tab="vocabulary">🧠 Vocabulário</button>
-            <button class="nav-button" data-tab="chatbot">⏳ Zerar Meta Diaria</button>
+            <button id="meta" class="nav-button" data-tab="chatbot">⏳ Zerar Meta Diaria</button>
         </nav>
 
         <section id="pomodoro-section" class="tab-content active">
             <div class="card pomodoro-timer-card">
                 <h3>Técnica Pomodoro</h3>
+                <!-- <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio> -->
                 <div class="timer-display" id="pomodoro-timer">25:00</div>
                 <div class="timer-controls">
                     <button id="start-pomodoro">Iniciar</button>
@@ -63,7 +70,7 @@
                     <h4>Configurações do Pomodoro</h4>
                     <label for="pomodoro-duration">Duração do Foco (min):</label>
                     <input type="number" id="pomodoro-duration" value="25" min="1">
-                    <label for="break-duration">Duração da Pausa (min):</label>
+                    <!-- <label for="break-duration">Duração da Pausa (min):</label> -->
                     <input type="number" id="break-duration" value="5" min="1">
                 </div>
             </div>

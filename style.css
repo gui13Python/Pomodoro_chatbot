@@ -7,6 +7,8 @@
     --gradient-start: #2b1152;
     --gradient-end: #4c118a;
     --border-radius: 12px;
+    --metabackground:rgba(241, 5, 5, 0.432);
+    --metacolor:white;
 }
 
 
@@ -156,8 +158,9 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+#meta:hover {
+    background-color:var(--metabackground);
+    color: var(--metacolor);
 }
 
 .nav-button.active {
@@ -329,10 +332,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    
+    
 }
 
 .chatbot-container h3 {
     margin-bottom: 5px;
+     background-color: aqua;
 }
 
 .chatbot-container p {
@@ -343,12 +350,14 @@ body {
     flex-grow: 1; /* Allow the chatbot to take available space */
     border-radius: var(--border-radius);
     overflow: hidden; /* Ensure chatbot content stays within bounds */
-    background-color: rgba(0, 0, 0, 0.2); /* Slight background for the widget area */
+    background-color: rgba(250, 247, 247, 0.2); /* Slight background for the widget area */
+   
 }
 
 #md{
     color: rgb(185, 181, 181);
 }
+
 
 /* Basic Responsiveness */
 @media (max-width: 768px) {
@@ -374,6 +383,10 @@ body {
     .nav-button {
         flex-grow: 1;
         margin-bottom: 10px;
+    }
+
+    #meta :hover{
+        background-color: gold;
     }
 
     .timer-display {
