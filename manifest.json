@@ -1,6 +1,6 @@
 {
-    "name": "NightStudy App",
-    "short_name": "NightStudy",
+    "name": "SpeakFlow",
+    "short_name": "SpeakFlow",
     "description": "Your intelligent English study companion with Pomodoro, Vocabulary, and AI Chat.",
     "start_url": "./index.html",
     "display": "standalone",
